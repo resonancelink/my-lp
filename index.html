@@ -108,6 +108,7 @@
             position: relative;
             z-index: 5;
             max-width: 800px;
+            padding: 0 20px;
         }
         .hero h1 {
             font-family: var(--font-serif);
@@ -284,6 +285,8 @@
             color: #fff; /* Match hero section text color */
             font-size: 0.9em;
         }
+        
+        /* --- Responsive Styles --- */
         @media (max-width: 800px) {
             .container {
                 padding: 0 20px;
@@ -294,7 +297,7 @@
             }
             .logo {
                 margin-bottom: 15px;
-                font-size: 0.9em;
+                font-size: 1em;
                 text-align: center;
             }
             nav {
@@ -304,19 +307,22 @@
             }
             nav a {
                 margin: 5px 10px;
+                font-size: 0.8em;
+            }
+            .hero {
+                height: 90vh; /* Adjust height for tablets */
             }
             .hero h1 {
-                font-size: 2.5em;
+                font-size: 2.8em;
             }
             .hero p {
-                font-size: 1em;
-                padding: 0 20px;
+                font-size: 1.1em;
             }
             .section {
-                padding: 60px 0;
+                padding: 80px 0;
             }
             .section-title {
-                font-size: 2.2em;
+                font-size: 2.4em;
                 margin-bottom: 40px;
             }
             .about-container {
@@ -335,12 +341,42 @@
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+            .counsellor-grid {
+                grid-template-columns: 1fr;
+            }
             .contact-info p {
-                font-size: 0.8em;
+                font-size: 1em;
             }
             .side-padding {
                 padding-left: 20px;
                 padding-right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 80vh; /* Further adjust height for phones */
+            }
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .section {
+                padding: 60px 0;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .counsellor-card {
+                padding: 20px;
+            }
+            .logo {
+                font-size: 0.9em;
+            }
+            nav a {
+                font-size: 0.75em;
             }
         }
 
@@ -883,7 +919,7 @@
                         <h3 class="counsellor-name">Alchemist凛 (アルケミストリン)</h3>
                         <p class="counsellor-location">東京都／オンライン可</p>
                         <p class="counsellor-catchphrase">心に寄り添い、心を緩めるカウンセリングです。</p>
-                        <p class="counsellor-bio">「心の奥底に抱えるエネルギーをリーディングし、今必要な気づきをお伝えします。本来の自分を取り戻し、前へ進むサポートをいたします。」</p>
+                        <p class="counsellor-bio">心の奥底に抱えるエネルギーをリーディングし、今必要な気づきをお伝えします。本来の自分を取り戻し、前へ進むサポートをいたします。</p>
                         <div class="counsellor-details">
                             <h4>得意な相談内容</h4>
                             <ul class="specialties-list">
@@ -891,9 +927,9 @@
                                 <li>恋愛関係</li>
                                 <li>仕事</li>
                                 <li>親子関係</li>
-                        <a href="https://alchemistlin.example.com/counselling-session" class="cta-button">予約・問い合わせ</a>
+                            </ul>
                         </div>
-                        <a href="ご案内｜カウンセリングセッション｜スピリチュアルカウンセラー Alchemist 凛" class="cta-button">予約・問い合わせ</a>
+                        <a href="https://note.com/lin3456/n/nab0b2a057e0f" class="cta-button">予約・問い合わせ</a>
                         <p class="counsellor-fee">60分 8,000円</p>
                     </div>
                     <!-- 蓮華 -->
