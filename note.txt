@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:webfeeds="http://webfeeds.org/rss/1.0" xmlns:note="https://note.com" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel>
+    <title>sma_333</title>
+    <description>一般社団法人スピリチュアル・メタサイエンス・アカデミーの公式noteです。
+
+
+https://spiritualmetascienceacademy.org/</description>
+    <link>https://note.com/sma_333</link>
+    <atom:link rel="self" type="application/rss+xml" href="https://note.com/sma_333/rss/"/>
+    <copyright>sma_333</copyright>
+    <webfeeds:icon>https://d2l930y2yx77uc.cloudfront.net/assets/default/default_note_logo_202212-f2394a9e5b60c49f48650eee13f6e75987c8c4f1cfa7555629a9697dc6015cd9.png</webfeeds:icon>
+    <webfeeds:logo>https://d2l930y2yx77uc.cloudfront.net/assets/default/default_note_logo_202212-f2394a9e5b60c49f48650eee13f6e75987c8c4f1cfa7555629a9697dc6015cd9.png</webfeeds:logo>
+    <webfeeds:accentColor>249F80</webfeeds:accentColor>
+    <webfeeds:related layout="card" target="browser"/>
+    <webfeeds:analytics id="UA-48687000-1" engine="GoogleAnalytics"/>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 Oct 2025 03:06:14 +0900</lastBuildDate>
+    <item>
+      <title>人はなぜ病気になるのか…</title>
+      <media:thumbnail>https://assets.st-note.com/production/uploads/images/222930318/rectangle_large_type_2_09c59bd5dfcca3089bcfb7f1e06571e1.png?width=800</media:thumbnail>
+      <description><![CDATA[<p name="007f81e6-f465-416a-9d76-d91e06cb6986" id="007f81e6-f465-416a-9d76-d91e06cb6986"><br>「病気」は、＜遺伝＞、＜生活習慣（不摂生）＞、＜加齢＞が原因だと言われていますが、ほとんどの医療従事者はそこに「心」（＝意識）が関わっているとは明確にしません。</p><p name="ca131d0e-fe25-4e4c-9160-e631392b3024" id="ca131d0e-fe25-4e4c-9160-e631392b3024">もし医者自身がそう考えていたとしても、自分で証明する手立てがなかったり、権威ある医学界の通説を翻しては”異端”扱いになるので、自然と口をつぐんでしまうのだと思います。</p><br/><a href='https://note.com/sma_333/n/n1b2512db9e91'>続きをみる</a>]]></description>
+      <note:creatorImage>https://assets.st-note.com/production/uploads/images/221947981/profile_f116dbbad0acc382e3f02b6cc7e91d2f.png?fit=bounds&amp;format=jpeg&amp;quality=85&amp;width=330</note:creatorImage>
+      <note:creatorName>sma_333</note:creatorName>
+      <pubDate>Mon, 13 Oct 2025 13:53:58 +0900</pubDate>
+      <link>https://note.com/sma_333/n/n1b2512db9e91</link>
+      <guid>https://note.com/sma_333/n/n1b2512db9e91</guid>
+    </item>
+    <item>
+      <title>少子化の本当の問題を”スピリチュアル”で考える</title>
+      <media:thumbnail>https://assets.st-note.com/production/uploads/images/222918074/rectangle_large_type_2_a82f190cf75899d667d0fd2b6d2e9294.png?width=800</media:thumbnail>
+      <description><![CDATA[<p name="15bbd221-96a8-47be-9b96-fc09e9a96a59" id="15bbd221-96a8-47be-9b96-fc09e9a96a59"><br>２０２３年より政府は「こども家庭庁」を発足させました。</p><p name="8e54d12a-eb1e-4c77-9c80-35efaa33373c" id="8e54d12a-eb1e-4c77-9c80-35efaa33373c">この組織が作られたのは、「子供の人権を守るため」という大義があるようですが、その大元には、かねてより深刻な問題となっている「少子化問題」があることは明白かと思います。</p><br/><a href='https://note.com/sma_333/n/n116890a019e1'>続きをみる</a>]]></description>
+      <note:creatorImage>https://assets.st-note.com/production/uploads/images/221947981/profile_f116dbbad0acc382e3f02b6cc7e91d2f.png?fit=bounds&amp;format=jpeg&amp;quality=85&amp;width=330</note:creatorImage>
+      <note:creatorName>sma_333</note:creatorName>
+      <pubDate>Mon, 13 Oct 2025 13:53:27 +0900</pubDate>
+      <link>https://note.com/sma_333/n/n116890a019e1</link>
+      <guid>https://note.com/sma_333/n/n116890a019e1</guid>
+    </item>
+  </channel>
+</rss>
