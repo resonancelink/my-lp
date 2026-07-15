@@ -860,6 +860,50 @@
             align-items: stretch;
         }
 
+        .graduate-list {
+            margin-top: 80px;
+            padding: 32px;
+            border: 1px solid #c5b358;
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .graduate-list-title {
+            font-family: var(--font-serif);
+            font-size: 1.3em;
+            font-weight: 400;
+            color: #1a2a3a;
+            margin: 0 0 20px;
+        }
+
+        .graduate-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .graduate-list a {
+            display: inline-block;
+            background-color: #c5b358;
+            color: #fff;
+            border-radius: 20px;
+            padding: 8px 20px;
+            font-size: 0.95em;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .graduate-list a:hover {
+            background-color: #a8873c;
+            transform: translateY(-2px);
+        }
+
         .counsellor-card {
             background-color: #fff;
             border: 1px solid #f0f0f0;
@@ -1346,26 +1390,6 @@
                     <p class="counsellor-fee"><span class="fee-segment">60分 8,800円</span> / <span
                             class="fee-segment">90分 12,000円</span></p>
                 </div>
-                <!-- YURIKO -->
-                <div class="counsellor-card" data-categories="インナーチャイルド">
-                    <img src="images/yuriko.jpg" alt="YURIKO (ゆり子)の顔写真" class="counsellor-image" loading="lazy">
-                    <h3 class="counsellor-name">YURIKO (ゆり子)</h3>
-                    <p class="counsellor-location">埼玉・東京近郊／オンライン可</p>
-                    <p class="counsellor-catchphrase">心の奥の小さな声も大切にします</p>
-                    <p class="counsellor-bio">見過ごされがちな心の声を大切にしながら、 安心して話せる場であなたの光を思い出せるようお手伝いします。</p>
-                    <div class="counsellor-details">
-                        <h4>得意な相談内容</h4>
-                        <ul class="specialties-list">
-                            <li>自分の心を見つめたいとき （内観・インナーチャイルド）</li>
-                            <li>3 次元的にあまり話せないこと</li>
-                            <li>亡くなった方への想いなど</li>
-                            <li>自分の本質と繋がる方法（Oリング）</li>
-                        </ul>
-                    </div>
-                    <a href="https://hana-yuriko.my.canva.site/" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 6,600円</span> / <span
-                            class="fee-segment">90分 9,900円</span></p>
-                </div>
                 <!-- キコ -->
                 <div class="counsellor-card" data-categories="親子・家族,仕事,人間関係">
                     <img src="images/kiko.jpg" alt="キコの顔写真" class="counsellor-image" loading="lazy">
@@ -1385,26 +1409,6 @@
                     <a href="https://ameblo.jp/kikotoraspiritual/" class="cta-button">予約・問い合わせ</a>
                     <p class="counsellor-fee"><span class="fee-segment">オンライン 60分 7,000円</span> / <span
                             class="fee-segment">対面 60分 10,000円</span></p>
-                </div>
-                <!-- ますみ -->
-                <div class="counsellor-card" data-categories="仕事,人間関係,心身の不調">
-                    <img src="images/masumi.jpg" alt="ますみの顔写真" class="counsellor-image" loading="lazy">
-                    <h3 class="counsellor-name">ますみ</h3>
-                    <p class="counsellor-location">三重県／オンライン可</p>
-                    <p class="counsellor-catchphrase">本来の輝きを取り戻し、望む未来を引き寄せる</p>
-                    <p class="counsellor-bio">チャネリングによって深い意識に繋がり、お悩みを根本から紐解いていきます。ご自身がネガティブに感じてしまう部分に光を照らす、癒しのカウンセリングです。
-                    </p>
-                    <div class="counsellor-details">
-                        <h4>得意な相談内容</h4>
-                        <ul class="specialties-list">
-                            <li>お仕事・やりたいこと</li>
-                            <li>人間関係</li>
-                            <li>生きづらさや葛藤</li>
-                            <li>自己愛の向上</li>
-                        </ul>
-                    </div>
-                    <a href="https://ameblo.jp/masumi-locus/entry-12842948794.html" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee">60分 8,800円</p>
                 </div>
                 <!-- 深晴 -->
                 <div class="counsellor-card" data-categories="インナーチャイルド,人間関係,恋愛・パートナーシップ">
@@ -1506,25 +1510,6 @@
                     <a href="mailto:rikahotmodels@gmail.com" class="cta-button">予約・問い合わせ</a>
                     <p class="counsellor-fee">60分 6,600円</p>
                 </div>
-                <!-- Alchemist凛 -->
-                <div class="counsellor-card" data-categories="人間関係,恋愛・パートナーシップ,仕事,親子・家族">
-                    <img src="images/alchemistlin.jpg" alt="Alchemist凛 (アルケミストリン)の顔写真" class="counsellor-image" loading="lazy">
-                    <h3 class="counsellor-name">Alchemist凛 (アルケミストリン)</h3>
-                    <p class="counsellor-location">東京都／オンライン可</p>
-                    <p class="counsellor-catchphrase">心に寄り添い、心を緩めるカウンセリングです。</p>
-                    <p class="counsellor-bio">心の奥底に抱えるエネルギーをリーディングし、今必要な気づきをお伝えします。本来の自分を取り戻し、前へ進むサポートをいたします。</p>
-                    <div class="counsellor-details">
-                        <h4>得意な相談内容</h4>
-                        <ul class="specialties-list">
-                            <li>人間関係</li>
-                            <li>恋愛関係</li>
-                            <li>仕事</li>
-                            <li>親子関係</li>
-                        </ul>
-                    </div>
-                    <a href="https://note.com/lin3456/n/nab0b2a057e0f" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee">60分 8,000円</p>
-                </div>
                 <!-- 蓮華 -->
                 <div class="counsellor-card" data-categories="人間関係,心身の不調">
                     <img src="images/renka.jpg" alt="蓮華 (レンカ)の顔写真" class="counsellor-image" loading="lazy">
@@ -1542,6 +1527,17 @@
                     <a href="https://www.lenka.website" class="cta-button">予約・問い合わせ</a>
                     <p class="counsellor-fee">90分 10,000円</p>
                 </div>
+                </div>
+                <div class="graduate-list">
+                    <h3 class="graduate-list-title">スピリチュアル・メタサイエンス・アカデミー・カウンセラーコース認定者</h3>
+                    <ul>
+                        <li><a href="https://ameblo.jp/masumi-locus/entry-12842948794.html" target="_blank"
+                                rel="noopener noreferrer">ますみ</a></li>
+                        <li><a href="https://hana-yuriko.my.canva.site/" target="_blank"
+                                rel="noopener noreferrer">YURIKO (ゆり子)</a></li>
+                        <li><a href="https://note.com/lin3456/n/nab0b2a057e0f" target="_blank"
+                                rel="noopener noreferrer">Alchemist凛 (アルケミストリン)</a></li>
+                    </ul>
                 </div>
             </div>
         </section>
