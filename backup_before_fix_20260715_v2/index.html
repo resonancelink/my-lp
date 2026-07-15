@@ -20,7 +20,7 @@
             --color-background: #ffffff;
             --color-primary: #a89e8d;
             /* A sophisticated gold/bronze tone */
-            --color-dark: #1a2a3a;
+            --color-dark: #1a1a1a;
         }
 
         body {
@@ -30,7 +30,6 @@
             background-color: var(--color-background);
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -162,13 +161,6 @@
             animation-delay: 1.5s;
         }
 
-        .hero-badges-animation {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInSlideUp 1s ease-out forwards;
-            animation-delay: 2s;
-        }
-
         @keyframes fadeInSlideUp {
             to {
                 opacity: 1;
@@ -183,67 +175,29 @@
             margin: 0 auto;
         }
 
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
         .hero-cta {
             display: inline-block;
+            margin-top: 40px;
             padding: 14px 40px;
-            border-radius: 8px;
+            border: 1px solid #c5b358;
+            border-radius: 2px;
+            color: #fff;
             font-family: var(--font-sans);
             font-size: 0.95em;
             font-weight: 300;
             letter-spacing: 0.1em;
             text-decoration: none;
+            background-color: rgba(197, 179, 88, 0.12);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .hero-cta-primary {
-            color: #fff;
-            background-color: #c5b358;
-            border: 1px solid #c5b358;
-        }
-
-        .hero-cta-primary:hover {
-            background-color: #b09b46;
+        .hero-cta:hover {
+            background-color: rgba(197, 179, 88, 0.28);
             transform: translateY(-2px);
-        }
-
-        .hero-cta-secondary {
-            color: #fff;
-            background-color: transparent;
-            border: 1px solid #fff;
-        }
-
-        .hero-cta-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-
-        .hero-badges {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 32px;
-            font-size: 0.8em;
-            letter-spacing: 0.02em;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .hero-badges span.divider {
-            width: 1px;
-            height: 14px;
-            background-color: rgba(255, 255, 255, 0.4);
         }
 
         .section {
-            padding: 72px 0;
+            padding: 96px 0;
         }
 
         .section-title {
@@ -251,26 +205,8 @@
             font-size: 2.8em;
             font-weight: 300;
             text-align: center;
-            margin-bottom: 48px;
+            margin-bottom: 60px;
             color: var(--color-dark);
-            position: relative;
-            padding-bottom: 20px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 2px;
-            background-color: #c5b358;
-        }
-
-        .section-title[style*="text-align: left"]::after {
-            left: 0;
-            transform: none;
         }
 
         .about-container {
@@ -292,13 +228,6 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .about-image video,
-        video.course-main-image {
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            background-color: #1a2a3a;
-        }
-
         .message-container {
             display: block;
             margin-top: 60px;
@@ -309,35 +238,6 @@
             line-height: 2;
             margin-bottom: 60px;
             /* Add more space below text */
-        }
-
-        .message-quote {
-            text-align: center;
-            font-family: var(--font-serif);
-            color: #1a2a3a;
-            font-size: 1.3em;
-            font-weight: 400;
-            margin: 30px 0;
-            padding: 0;
-            border: none;
-        }
-
-        .message-more summary {
-            cursor: pointer;
-            color: #c5b358;
-            text-decoration: underline;
-            font-size: 0.95em;
-            margin-bottom: 20px;
-            list-style: none;
-        }
-
-        .message-more summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .message-more:not([open]) .text-open,
-        .message-more[open] .text-closed {
-            display: none;
         }
 
         .message-image img {
@@ -352,133 +252,33 @@
 
         /* Course cards */
         .course-grid {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             text-align: left;
         }
 
         .course-card {
-            box-sizing: border-box;
-            background-color: #fff;
-            border: 1px solid #f0f0f0;
+            background-color: #faf9f5;
+            border: 1px solid #c5b358;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             padding: 30px;
             display: flex;
             flex-direction: column;
-            flex: 1 1 260px;
-            max-width: 320px;
-            min-width: 0;
         }
 
         .course-card h3 {
             font-family: var(--font-serif);
             font-size: 1.8em;
             font-weight: 400;
-            margin: 0 0 10px;
+            margin: 0 0 15px;
             color: var(--color-dark);
-        }
-
-        .course-label {
-            display: inline-block;
-            color: #c5b358;
-            font-size: 0.85em;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            margin: 0 0 12px;
         }
 
         .course-card p {
             font-size: 1em;
             line-height: 1.9;
             flex-grow: 1;
-        }
-
-        .course-step-arrow {
-            flex: 0 0 auto;
-            font-family: var(--font-serif);
-            font-size: 2em;
-            color: #c5b358;
-        }
-
-        .course-step-arrow .arrow-v {
-            display: none;
-        }
-
-        /* Flow section */
-        .flow-steps {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .flow-step {
-            flex: 1 1 220px;
-            max-width: 280px;
-            text-align: center;
-        }
-
-        .flow-number {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background-color: #c5b358;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-serif);
-            font-size: 1.4em;
-            margin: 0 auto 16px;
-        }
-
-        .flow-step p {
-            font-size: 0.95em;
-            line-height: 1.8;
-        }
-
-        /* FAQ section */
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #eee;
-            padding: 18px 0;
-        }
-
-        .faq-item summary {
-            cursor: pointer;
-            font-weight: 700;
-            color: #1a2a3a;
-            list-style: none;
-        }
-
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-item summary::before {
-            content: 'Q. ';
-            color: #c5b358;
-            font-weight: 700;
-        }
-
-        .faq-item p {
-            margin: 12px 0 0;
-            line-height: 1.8;
-        }
-
-        .faq-item p::before {
-            content: 'A. ';
-            color: #c5b358;
-            font-weight: 700;
         }
 
         .course-card-more {
@@ -564,19 +364,6 @@
             border-bottom: none;
         }
 
-        .news-announce {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            padding: 20px 24px;
-            border: 1px solid #c5b358;
-            border-radius: 8px;
-            background-color: #faf8f5;
-        }
-
-        .news-announce p {
-            margin: 0;
-        }
-
         .news-date {
             flex: 0 0 140px;
             color: #a8873c;
@@ -593,36 +380,8 @@
             color: var(--color-primary);
         }
 
-        #news {
-            background-color: #ffffff;
-        }
-
-        #about {
-            background-color: #faf8f5;
-        }
-
-        #courses {
-            background-color: #ffffff;
-        }
-
-        #flow {
-            background-color: #ffffff;
-        }
-
-        #counsellors {
-            background-color: #faf8f5;
-        }
-
-        #faq {
-            background-color: #faf8f5;
-        }
-
-        #blog {
-            background-color: #ffffff;
-        }
-
         #contact {
-            background-color: #faf8f5;
+            background-color: #f7f7f7;
         }
 
         .contact-info {
@@ -636,9 +395,19 @@
             font-weight: 400;
         }
 
-        /* 見出しは常に完全に表示する（キラキラ演出は廃止し、視認性を優先） */
+        /* 見出しは常に表示し、キラキラ効果のみスクロールで発火させる（JS不発火時も読めるように） */
         .animate-on-scroll {
             opacity: 1;
+            transform: translateX(0);
+            transition: text-shadow 1s ease-out;
+            text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+        }
+
+        /* スクロールアニメーション後の状態 */
+        .animate-on-scroll.is-visible {
+            /* キラキラ効果の最終状態 */
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+            /* Gold sparkle */
         }
 
         footer {
@@ -704,20 +473,6 @@
                 font-size: 0.85em;
             }
 
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-badges {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .hero-badges span.divider {
-                display: none;
-            }
-
             .section {
                 padding: 64px 0;
             }
@@ -745,29 +500,8 @@
             }
 
             .course-grid {
-                flex-direction: column;
-            }
-
-            .course-card {
-                max-width: 100%;
-                width: 100%;
-            }
-
-            .course-step-arrow .arrow-h {
-                display: none;
-            }
-
-            .course-step-arrow .arrow-v {
-                display: inline;
-            }
-
-            .flow-steps {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .flow-step {
-                max-width: 100%;
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
             .contact-info p {
@@ -790,7 +524,7 @@
             }
 
             .section {
-                padding: 48px 0;
+                padding: 64px 0;
             }
 
             .section-title {
@@ -816,40 +550,6 @@
             font-weight: 400;
             margin-bottom: 50px;
             text-align: center;
-        }
-
-        /* Counsellor filter */
-        .counsellor-filter {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-
-        .filter-button {
-            background-color: #fff;
-            border: 1px solid #c5b358;
-            color: #1a2a3a;
-            border-radius: 20px;
-            padding: 8px 18px;
-            font-family: var(--font-sans);
-            font-size: 0.85em;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .filter-button:hover {
-            background-color: rgba(197, 179, 88, 0.15);
-        }
-
-        .filter-button.is-active {
-            background-color: #c5b358;
-            color: #fff;
-        }
-
-        .counsellor-card.is-hidden {
-            display: none;
         }
 
         /* Counsellor Grid */
@@ -1094,24 +794,13 @@
                 <h1 class="hero-title-animation">意識の探求、そして<br>自己の解放へ</h1>
                 <p class="hero-text-animation">
                     精神的超科学（スピリチュアル・メタサイエンス）でカウンセラーを養成するオンラインのアカデミー。7000人以上のカウンセリングで培った実績、魂・心・精神のエネルギーを学ぶ1年半のプログラム。</p>
-                <div class="hero-buttons hero-cta-animation">
-                    <a href="#courses" class="hero-cta hero-cta-primary">コースを見る</a>
-                    <a href="#contact" class="hero-cta hero-cta-secondary">お問い合わせ</a>
-                </div>
-                <div class="hero-badges hero-badges-animation">
-                    <span>累計7000人以上のカウンセリング実績</span>
-                    <span class="divider"></span>
-                    <span>1年半の体系カリキュラム</span>
-                </div>
+                <a href="#about" class="hero-cta hero-cta-animation">アカデミーについて知る</a>
             </div>
         </section>
 
         <section id="news" class="section">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">News</h2>
-                <div class="news-announce">
-                    <p>2027年1月より、新コース「教養科」が開講予定です。（案内をご希望の場合はメルマガにご登録ください）</p>
-                </div>
                 <ul class="news-list">
                     <li class="news-item">
                         <span class="news-date">2026年4月1日</span>
@@ -1129,16 +818,6 @@
                         <span class="news-date">2025年4月1日</span>
                         <span class="news-body">SMA第2期がスタートしました。</span>
                     </li>
-                    <!-- 表示上限（最大5件）のため以下は非表示。削除はしていません。
-                    <li class="news-item">
-                        <span class="news-date">2026年2月8日</span>
-                        <span class="news-body"><a href="https://resonancelink.github.io/SMA_event_march2/" target="_blank">スピメタ大カウンセリング祭り</a></span>
-                    </li>
-                    <li class="news-item">
-                        <span class="news-date">2026年1月18日</span>
-                        <span class="news-body"><a href="https://resonancelink.github.io/SMA3rd_zoom/" target="_blank">＜第3期＞２月１日説明会実施</a></span>
-                    </li>
-                    -->
                 </ul>
             </div>
         </section>
@@ -1148,7 +827,7 @@
                 <h2 class="section-title animate-on-scroll">About the Academy</h2>
                 <div class="about-container">
                     <div class="about-image">
-                        <video src="sma_movie2.mp4" class="image-hover-effect" controls preload="metadata"
+                        <video src="sma_movie2.mp4" class="image-hover-effect" controls
                             poster="michiyo-profile-2026.jpg" autoplay loop muted playsinline></video>
                     </div>
                     <div class="about-text">
@@ -1166,37 +845,35 @@
                             style="text-align: left; margin-bottom: 30px; font-size: 2.2em;">みちよからのメッセージ</h2>
                         <p>
                             スピリチュアルは、抽象的で定義ができない分野なので、ややもすると怪しまれることもあります。そもそも見えないものを扱う領域なので現在の科学では証明のしようがないものでもあります。ですが、エビデンスを出せないからといって、この世に全く存在しないと言い切れるのでしょうか。
-                        </p>
                         <p>
-                            わたしは、量子物理学の研究が進めば、早くて数十年後、遅くても１００年後にはスピリチュアルで扱う「意識」は”科学”として扱われると信じていますが、現代の科学では証明不可能でも、それでも“そこに存在するエネルギー”から問題の原因を見、改善していけるとしたらどうでしょうか。実際、心、精神、魂を「エネルギー」として感知し理解することで、人生の悩みは減り、心と身体が軽くなっていく…という変化を累計7000人以上のカウンセリングセッションで目の当たりにしてきました。
+                            わたしは、量子物理学の研究が進めば、早くて数十年後、遅くても１００年後にはスピリチュアルで扱う「意識」は”科学”として扱われると信じていますが、現代の科学では証明不可能でも、それでも“そこに存在するエネルギー”から問題の原因を見、改善していけるとしたらどうでしょうか。実際、心、精神、魂を「エネルギー」として感知し理解することで、人生の悩みは減り、病気も癒され消滅していく…という現実を累計7000人以上のカウンセリングセッションで目の当たりにしてきました。
                         </p>
                         <p>
                             見える世界の定義は“人間”が作ったものですが、それを超越した世界が「スピリチュアル・メタサイエンス」と考えます。そして真のスピリチュアルは魂を扱い、精神、心を救う分野にありますが宗教とは異なります。ましてや人を恐れさせたり、苦しめる世界とは真逆な領域にあるものです。
                         </p>
-                        <blockquote class="message-quote">《既存のスピリチュアルを超えたスピリチュアル》</blockquote>
-                        <details class="message-more">
-                            <summary><span class="text-closed">続きを読む</span><span class="text-open">閉じる</span></summary>
-                            <p>
-                                スピリチュアル・メタサイエンス・アカデミーは、スピリチュアルの現象事象自体を深堀して科学的に証明する…ということは行いません。見えないものが科学で証明されるのを待っていたら、何十年も、何世紀も経ってしまうかもしれない。そうではなく、今目の前の人が抱えている様々な問題に《エネルギーのレベル》から対応でき、人間が生きやすくなるための＜精神的超科学（スピリチュアル・メタサイエンス）＞を理解し、扱えるカウンセラー／ヒーラーを育てる目的をもって設立されました。
-                            </p>
-                            <p>
-                                近代社会は物質的なもの、見えるものばかりに比重を置きすぎたがゆえに、精神や魂という人間の根幹が忘れ去られています。その弊害として、心の問題は重要視されず悩みは増える一方です。さらに心と精神が直接影響を与える身体の問題（病気）も増加、西洋医学では「人はなぜ病気になるのか」も議論されないまま、薬漬けの診療が行われている昨今です。
-                                これからは特に社会のデジタル化が進むことにより、人もそれに合わせ機械的になり、本来の人間らしさを失うことで心身の不調をきたすことや、仕事をITに取られることでのアイデンティティの喪失など、人のマインドが崩壊していくことは、容易に想像できることです。
-                            </p>
-                            <p>
-                                このような現状、未来像からわたしたちが今できることは、既存の科学やテクノロジーとは対極にあるように見えて実は”同じもの”であるスピリチュアルという目には見えないけども本質を扱う科学での解決方法を見出すことです。
-                            </p>
-                            <p>
-                                スピリチュアリティは、学問だけではなく実践や気づきの体験をもって活かせるものです。自分に愛を持ち、社会で自分らしく生きやすくなる人を増やすためのスピリチュアルを講義します。
-                            </p>
-                            <p>
-                                当「スピリチュアル・メタサイエンス・アカデミー」では、1年半のカリキュラムでカウンセラーを養成、
-                            </p>
-                            <p>
-                                で、人々の心に向き合い、社会やコミュニティーで活躍する人材を育成・派遣します。
-                            </p>
-                            <p>&nbsp;</p>
-                        </details>
+                        <p>
+                            スピリチュアル・メタサイエンス・アカデミーは、スピリチュアルの現象事象自体を深堀して科学的に証明する…ということは行いません。見えないものが科学で証明されるのを待っていたら、何十年も、何世紀も経ってしまうかもしれない。そうではなく、今目の前の人が抱えている様々な問題に《エネルギーのレベル》から対応でき、人間が生きやすくなるための＜精神的超科学（スピリチュアル・メタサイエンス）＞を理解し、扱えるカウンセラー／ヒーラーを育てる目的をもって設立されました。
+                        </p>
+                        <p>
+                            近代社会は物質的なもの、見えるものばかりに比重を置きすぎたがゆえに、精神や魂という人間の根幹が忘れ去られています。その弊害として、心の問題は重要視されず悩みは増える一方です。さらに心と精神が直接影響を与える身体の問題（病気）も増加、西洋医学では「人はなぜ病気になるのか」も議論されないまま、薬漬けの診療が行われている昨今です。
+                            これからは特に社会のデジタル化が進むことにより、人もそれに合わせ機械的になり、本来の人間らしさを失うことで心身の不調をきたすことや、仕事をITに取られることでのアイデンティティの喪失など、人のマインドが崩壊していくことは、容易に想像できることです。
+                        </p>
+                        <p>
+                            このような現状、未来像からわたしたちが今できることは、既存の科学やテクノロジーとは対極にあるように見えて実は”同じもの”であるスピリチュアルという目には見えないけども本質を扱う科学での解決方法を見出すことです。
+                        </p>
+                        <p>
+                            スピリチュアリティは、学問だけではなく実践や気づきの体験をもって活かせるものです。自分に愛を持ち、社会で自分らしく生きやすくなる人を増やすためのスピリチュアルを講義します。
+                        </p>
+                        <p>
+                            当「スピリチュアル・メタサイエンス・アカデミー」では、1年半のカリキュラムでカウンセラーを養成、
+                        </p>
+                        <p>
+                            《既存のスピリチュアルを超えたスピリチュアル》
+                        </p>
+                        <p>
+                            で、人々の心に向き合い、社会やコミュニティーで活躍する人材を育成・派遣します。
+                        </p>
+                        <p>&nbsp;</p>
                         <p>
                             <strong style="color: #c5b358;">一般社団法人スピリチュアル・メタサイエンス・アカデミー代表　<a
                                     href="https://angelswayhealing.com/" target="_blank"
@@ -1204,8 +881,7 @@
                         </p>
                     </div>
                     <div class="message-image">
-                        <img src="michiyo-message-new.png" alt="みちよからのメッセージ" class="image-hover-effect"
-                            loading="lazy">
+                        <img src="michiyo-message-new.png" alt="みちよからのメッセージ" class="image-hover-effect">
                     </div>
                 </div>
             </div>
@@ -1215,81 +891,38 @@
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Our Courses</h2>
                 <div style="text-align: center; margin-bottom: 40px;">
-                    <p style="font-size: 1.4em; font-weight: bold; margin-bottom: 10px;">第3期開講中（2026年4月開講）</p>
+                    <p style="font-size: 1.4em; font-weight: bold; margin-bottom: 10px;">第3期 開講中（2026年4月〜）</p>
                     <p>2027年1月より「教養科」開講予定</p>
-                    <a href="https://resonancelink.github.io/SMA3rd_zoom/" target="_blank" rel="noopener noreferrer"
-                        class="cta-button" style="display: inline-block; width: auto; margin-top: 16px;">第3期の開催情報を見る</a>
                 </div>
-                <video src="sma_movie.mp4" class="image-hover-effect course-main-image" controls preload="metadata"
+                <video src="sma_movie.mp4" class="image-hover-effect course-main-image" controls
                     poster="images/michiyo_pic.png" autoplay loop muted playsinline></video>
                 <div class="course-grid">
                     <div class="course-card">
                         <h3>エキスパートコース</h3>
-                        <p class="course-label">基礎共通科目・1年</p>
                         <p>基礎共通科目（１年）　エネルギーの基礎、意識の仕組みを学び、カウンセラーとしての土台を作ります。<br>カウンセラーを目指す方、目指さない方も受けていただけます</p>
                         <a href="#contact" class="course-card-more">詳しく見る</a>
                     </div>
-                    <div class="course-step-arrow" aria-hidden="true"><span class="arrow-h">→</span><span
-                            class="arrow-v">↓</span></div>
                     <div class="course-card">
                         <h3>カウンセラーコース</h3>
-                        <p class="course-label">特別科目・6か月・エキスパート修了者のみ</p>
                         <p>特別科目（６か月）　エキスパートコース修了の方のみ受講可。基礎科目で学んだ概念をモニターセッションで実践していただきます（動画、レポートで提出）</p>
                         <a href="#contact" class="course-card-more">詳しく見る</a>
                     </div>
-                    <div class="course-step-arrow" aria-hidden="true"><span class="arrow-h">→</span><span
-                            class="arrow-v">↓</span></div>
                     <div class="course-card">
                         <h3>プロフェッショナルコース</h3>
-                        <p class="course-label">1年更新・カウンセラー修了者対象</p>
                         <p>カウンセラーコース修了者対象（１年更新）　ブラッシュアップ講座、個別セミナーやWSの支援、ビジネス面でのアドバイスが受けられます</p>
                         <a href="#contact" class="course-card-more">詳しく見る</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="flow" class="section">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">入学までの流れ</h2>
-                <div class="flow-steps">
-                    <div class="flow-step">
-                        <div class="flow-number">1</div>
-                        <p>説明会に参加する（オンライン開催。開催情報はNews・Coursesのリンクからご確認いただけます）</p>
-                    </div>
-                    <div class="course-step-arrow" aria-hidden="true"><span class="arrow-h">→</span><span
-                            class="arrow-v">↓</span></div>
-                    <div class="flow-step">
-                        <div class="flow-number">2</div>
-                        <p>お申し込み（説明会後にご案内する手続きに沿ってお申し込みください）</p>
-                    </div>
-                    <div class="course-step-arrow" aria-hidden="true"><span class="arrow-h">→</span><span
-                            class="arrow-v">↓</span></div>
-                    <div class="flow-step">
-                        <div class="flow-number">3</div>
-                        <p>開講（次の開講は2027年1月・新コース「教養科」を予定しています）</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="counsellors" class="section">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Our Counsellors</h2>
                 <p class="section-subtitle">スピリチュアル・メタサイエンス・アカデミーの認定カウンセラー</p>
-                <div class="counsellor-filter" role="group" aria-label="得意な相談内容で絞り込む">
-                    <button type="button" class="filter-button is-active" data-filter="すべて">すべて</button>
-                    <button type="button" class="filter-button" data-filter="人間関係">人間関係</button>
-                    <button type="button" class="filter-button" data-filter="恋愛・パートナーシップ">恋愛・パートナーシップ</button>
-                    <button type="button" class="filter-button" data-filter="親子・家族">親子・家族</button>
-                    <button type="button" class="filter-button" data-filter="仕事">仕事</button>
-                    <button type="button" class="filter-button" data-filter="心身の不調">心身の不調</button>
-                    <button type="button" class="filter-button" data-filter="インナーチャイルド">インナーチャイルド</button>
-                </div>
                 <div class="counsellor-grid">
                 <!-- NATSUMI -->
-                <div class="counsellor-card" data-categories="人間関係,恋愛・パートナーシップ,心身の不調">
-                    <img src="images/natsumi.jpeg" alt="NATSUMI (ナツミ)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/natsumi.jpeg" alt="NATSUMI (ナツミ)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">NATSUMI (ナツミ)</h3>
                     <p class="counsellor-location">東京都品川区／オンライン可</p>
                     <p class="counsellor-catchphrase">誰にも言えなかった“想い”を、安心してお話しください</p>
@@ -1304,12 +937,12 @@
                         </ul>
                     </div>
                     <a href="https://natsumihealing.studio.site" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 11,000円</span> / <span
+                    <p class="counsellor-fee"><span class="fee-segment">60分 11,000円</span>/<span
                             class="fee-segment">90分 16,500円</span></p>
                 </div>
                 <!-- 美禰子 -->
-                <div class="counsellor-card" data-categories="人間関係,心身の不調,親子・家族">
-                    <img src="images/mineko.jpg" alt="美禰子 (ミネコ)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/mineko.jpg" alt="美禰子 (ミネコ)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">美禰子 (ミネコ)</h3>
                     <p class="counsellor-location">東京都北区／オンライン可</p>
                     <p class="counsellor-catchphrase">お悩みの根本に光を当て、本当の私を思い出す。</p>
@@ -1328,8 +961,8 @@
                     <p class="counsellor-fee">60分 10,000円</p>
                 </div>
                 <!-- ゆうじ -->
-                <div class="counsellor-card" data-categories="人間関係,恋愛・パートナーシップ,仕事,親子・家族,インナーチャイルド">
-                    <img src="images/yuji.jpg" alt="ゆうじの顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/yuji.jpg" alt="ゆうじの顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">ゆうじ</h3>
                     <p class="counsellor-location">ドイツ・ミュンヘン市／オンライン可</p>
                     <p class="counsellor-catchphrase"></p>
@@ -1343,12 +976,12 @@
                         </ul>
                     </div>
                     <a href="https://www.ugosteopath.com" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 8,800円</span> / <span
+                    <p class="counsellor-fee"><span class="fee-segment">60分 8,800円</span>/<span
                             class="fee-segment">90分 12,000円</span></p>
                 </div>
                 <!-- YURIKO -->
-                <div class="counsellor-card" data-categories="インナーチャイルド">
-                    <img src="images/yuriko.jpg" alt="YURIKO (ゆり子)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/yuriko.jpg" alt="YURIKO (ゆり子)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">YURIKO (ゆり子)</h3>
                     <p class="counsellor-location">埼玉・東京近郊／オンライン可</p>
                     <p class="counsellor-catchphrase">心の奥の小さな声も大切にします</p>
@@ -1363,12 +996,12 @@
                         </ul>
                     </div>
                     <a href="https://hana-yuriko.my.canva.site/" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 6,600円</span> / <span
+                    <p class="counsellor-fee"><span class="fee-segment">60分 6,600円</span>/<span
                             class="fee-segment">90分 9,900円</span></p>
                 </div>
                 <!-- キコ -->
-                <div class="counsellor-card" data-categories="親子・家族,仕事,人間関係">
-                    <img src="images/kiko.jpg" alt="キコの顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/kiko.jpg" alt="キコの顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">キコ</h3>
                     <p class="counsellor-location">東京／オンライン可</p>
                     <p class="counsellor-catchphrase">スピリチュアル・メタサイエンス・アカデミーでの学びによるセッションをいたします。</p>
@@ -1383,12 +1016,12 @@
                         </ul>
                     </div>
                     <a href="https://ameblo.jp/kikotoraspiritual/" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">オンライン 60分 7,000円</span> / <span
-                            class="fee-segment">対面 60分 10,000円</span></p>
+                    <p class="counsellor-fee"><span class="fee-segment">オンライン60分 7,000円</span>/<span
+                            class="fee-segment">対面60分 10,000円</span></p>
                 </div>
                 <!-- ますみ -->
-                <div class="counsellor-card" data-categories="仕事,人間関係,心身の不調">
-                    <img src="images/masumi.jpg" alt="ますみの顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/masumi.jpg" alt="ますみの顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">ますみ</h3>
                     <p class="counsellor-location">三重県／オンライン可</p>
                     <p class="counsellor-catchphrase">本来の輝きを取り戻し、望む未来を引き寄せる</p>
@@ -1407,8 +1040,8 @@
                     <p class="counsellor-fee">60分 8,800円</p>
                 </div>
                 <!-- 深晴 -->
-                <div class="counsellor-card" data-categories="インナーチャイルド,人間関係,恋愛・パートナーシップ">
-                    <img src="images/miharu.jpg" alt="深晴 (ミハル)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/miharu.jpg" alt="深晴 (ミハル)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">深晴 (ミハル)</h3>
                     <p class="counsellor-location">福岡県北九州市／オンライン可</p>
                     <p class="counsellor-catchphrase">こころを晴れやかにするお手伝いをします</p>
@@ -1424,12 +1057,12 @@
                     </div>
                     <a href="https://www.instagram.com/mi_haru8888?igsh=MWl2ZGh6bGwzaTJxMA%3D%3D&utm_source=qr"
                         class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 8,888円</span> / <span
+                    <p class="counsellor-fee"><span class="fee-segment">60分 8,888円</span>/<span
                             class="fee-segment">90分 12,222円</span></p>
                 </div>
                 <!-- 久美（クミ） -->
-                <div class="counsellor-card" data-categories="親子・家族,恋愛・パートナーシップ">
-                    <img src="images/kumi.jpg" alt="久美（クミ）の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/kumi.jpg" alt="久美（クミ）の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">久美（クミ）</h3>
                     <p class="counsellor-location">北九州／オンライン可</p>
                     <p class="counsellor-catchphrase">心と魂の声に寄り添い必要な気づきをお届けします</p>
@@ -1443,12 +1076,12 @@
                         </ul>
                     </div>
                     <a href="https://93healingroom.hp.peraichi.com/" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">60分 6,600円</span> / <span
+                    <p class="counsellor-fee"><span class="fee-segment">60分 6,600円</span>/<span
                             class="fee-segment">90分 9,900円</span></p>
                 </div>
                 <!-- 吉田 ゆうこ -->
-                <div class="counsellor-card" data-categories="心身の不調,親子・家族,恋愛・パートナーシップ">
-                    <img src="images/yuko.jpeg" alt="吉田 ゆうこ (よしだ ゆうこ)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/yuko.jpeg" alt="吉田 ゆうこ (よしだ ゆうこ)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">吉田 ゆうこ (よしだ ゆうこ)</h3>
                     <p class="counsellor-location">福井県／オンライン可</p>
                     <p class="counsellor-catchphrase">すべての経験に光を★</p>
@@ -1467,8 +1100,8 @@
                     <p class="counsellor-fee">60分 11,000円</p>
                 </div>
                 <!-- うみかぜ -->
-                <div class="counsellor-card" data-categories="仕事,人間関係,心身の不調,インナーチャイルド">
-                    <img src="images/umikaze2.jpg" alt="うみかぜの顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/umikaze2.jpg" alt="うみかぜの顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">うみかぜ</h3>
                     <p class="counsellor-location">東京都／オンライン可</p>
                     <p class="counsellor-catchphrase">20年の心理・相談実績とエネルギー・リーディングでサポートいたします</p>
@@ -1483,13 +1116,13 @@
                         </ul>
                     </div>
                     <a href="https://541nw.hp.peraichi.com/" class="cta-button">予約・問い合わせ</a>
-                    <p class="counsellor-fee"><span class="fee-segment">オンライン 60分 6,600円</span> / <span
-                            class="fee-segment">90分 8,800円</span> / <span class="fee-segment">対面 70分
+                    <p class="counsellor-fee"><span class="fee-segment">オンライン60分 6,600円</span>/<span
+                            class="fee-segment">90分 8,800円</span>/<span class="fee-segment">対面70分
                             9,900円</span></p>
                 </div>
                 <!-- 中澤里加 -->
-                <div class="counsellor-card" data-categories="仕事">
-                    <img src="images/rika.jpg" alt="中澤里加の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/rika.jpg" alt="中澤里加の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">中澤里加</h3>
                     <p class="counsellor-location">岐阜県／オンライン可</p>
                     <p class="counsellor-catchphrase">人生まるごとアトラクション！ イキイキと輝けるパワーを！</p>
@@ -1507,8 +1140,8 @@
                     <p class="counsellor-fee">60分 6,600円</p>
                 </div>
                 <!-- Alchemist凛 -->
-                <div class="counsellor-card" data-categories="人間関係,恋愛・パートナーシップ,仕事,親子・家族">
-                    <img src="images/alchemistlin.jpg" alt="Alchemist凛 (アルケミストリン)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/alchemistlin.jpg" alt="Alchemist凛 (アルケミストリン)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">Alchemist凛 (アルケミストリン)</h3>
                     <p class="counsellor-location">東京都／オンライン可</p>
                     <p class="counsellor-catchphrase">心に寄り添い、心を緩めるカウンセリングです。</p>
@@ -1526,8 +1159,8 @@
                     <p class="counsellor-fee">60分 8,000円</p>
                 </div>
                 <!-- 蓮華 -->
-                <div class="counsellor-card" data-categories="人間関係,心身の不調">
-                    <img src="images/renka.jpg" alt="蓮華 (レンカ)の顔写真" class="counsellor-image" loading="lazy">
+                <div class="counsellor-card">
+                    <img src="images/renka.jpg" alt="蓮華 (レンカ)の顔写真" class="counsellor-image">
                     <h3 class="counsellor-name">蓮華 (レンカ)</h3>
                     <p class="counsellor-location">広島／オンライン可</p>
                     <p class="counsellor-catchphrase">モヤモヤを手放して、笑顔になれるヒントを届けます</p>
@@ -1546,26 +1179,6 @@
             </div>
         </section>
 
-        <section id="faq" class="section">
-            <div class="container">
-                <h2 class="section-title animate-on-scroll">よくあるご質問</h2>
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary>講座はオンラインで受講できますか？</summary>
-                        <p>はい、すべてオンラインで受講いただけます。</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>カウンセラーを目指していなくても受講できますか？</summary>
-                        <p>はい。エキスパートコース（基礎共通科目・1年）は、カウンセラーを目指す方も目指さない方も受講いただけます。</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary>修了すると資格が得られますか？</summary>
-                        <p>カウンセラーコースを修了された方は、『プロコース』へ登録いただくことで当アカデミーの認定カウンセラーとして活動いただけます（1年更新）。</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
         <section id="blog" class="section">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">From Our Blog</h2>
@@ -1573,7 +1186,7 @@
                 <!-- Card 1 -->
                 <div class="blog-card">
                     <a href="https://note.com/sma_333/n/nf7fe465a6497" target="_blank" rel="noopener noreferrer">
-                        <img src="note_pic_3.png" alt="「生きるのが辛い…」 デジタルネイティブの若者が抱える深刻な悩み" class="blog-image" loading="lazy">
+                        <img src="note_pic_3.png" alt="「生きるのが辛い…」 デジタルネイティブの若者が抱える深刻な悩み" class="blog-image">
                         <div class="blog-content">
                             <h3 class="blog-title">「生きるのが辛い…」 デジタルネイティブの若者が抱える深刻な悩み</h3>
                             <p class="blog-excerpt">
@@ -1587,7 +1200,7 @@
                 <div class="blog-card">
                     <a href="https://note.com/sma_333/n/n1b2512db9e91" target="_blank" rel="noopener noreferrer">
                         <img src="https://assets.st-note.com/production/uploads/images/222930318/rectangle_large_type_2_09c59bd5dfcca3089bcfb7f1e06571e1.png?width=800"
-                            alt="人はなぜ病気になるのか…" class="blog-image" loading="lazy">
+                            alt="人はなぜ病気になるのか…" class="blog-image">
                         <div class="blog-content">
                             <h3 class="blog-title">人はなぜ病気になるのか…</h3>
                             <p class="blog-excerpt">
@@ -1600,7 +1213,7 @@
                 <div class="blog-card">
                     <a href="https://note.com/sma_333/n/n116890a019e1" target="_blank" rel="noopener noreferrer">
                         <img src="https://assets.st-note.com/production/uploads/images/222918074/rectangle_large_type_2_a82f190cf75899d667d0fd2b6d2e9294.png?width=800"
-                            alt="少子化の本当の問題を”スピリチュアル”で考える" class="blog-image" loading="lazy">
+                            alt="少子化の本当の問題を”スピリチュアル”で考える" class="blog-image">
                         <div class="blog-content">
                             <h3 class="blog-title">少子化の本当の問題を”スピリチュアル”で考える</h3>
                             <p class="blog-excerpt">
@@ -1625,11 +1238,11 @@
                                 d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
                         </svg></a>
                     <a href="https://ameblo.jp/michiyo-hikiyose/" target="_blank" aria-label="Ameblo"><img
-                            src="icon/ameba.png" alt="Ameblo" loading="lazy"></a>
+                            src="https://ameblo.jp/favicon.ico" alt="Ameblo"></a>
                     <a href="https://voicy.jp/channel/1756" target="_blank" aria-label="Voicy"><img
-                            src="icon/voicy.png" alt="Voicy" loading="lazy"></a>
+                            src="https://voicy.jp/favicon.ico" alt="Voicy"></a>
                     <a href="https://www.amazon.co.jp/stores/みちよ/author/B005L8V05K" target="_blank"
-                        aria-label="Amazon"><img src="icon/icons8-アマゾン-48.png" alt="Amazon" loading="lazy"></a>
+                        aria-label="Amazon"><img src="https://www.amazon.co.jp/favicon.ico" alt="Amazon"></a>
                     <a href="https://lounge.dmm.com/detail/1986/" target="_blank" aria-label="DMM Online Salon"><img
                             src="sma-image-6.png" alt="DMM Online Salon"></a>
                 </div>
@@ -1642,7 +1255,7 @@
                 <div class="contact-info">
                     <p>入学に関するご質問・法人からのご相談はメールにてお受けしています。</p>
                     <a href="mailto:info@spiritualmetascienceacademy.org" class="cta-button"
-                        style="display: block; box-sizing: border-box; width: 100%; max-width: 400px; margin: 20px auto 0; font-size: 0.9rem; white-space: nowrap;">info@spiritualmetascienceacademy.org</a>
+                        style="display: block; box-sizing: border-box; width: 100%; max-width: 360px; margin: 20px auto 0; word-break: break-all;">info@spiritualmetascienceacademy.org</a>
                     <p style="margin-top: 3em;">※当一般社団法人、並びに各個人の活動はあらゆる宗教団体・既存の思想団体とは関係ございません。</p>
                 </div>
             </div>
@@ -1650,8 +1263,7 @@
     </main>
 
     <footer>
-        <p>※当一般社団法人、並びに各個人の活動はあらゆる宗教団体・既存の思想団体とは関係ございません。</p>
-        <p>&copy; 2026 Spiritual Metascience Academy. All Rights Reserved.</p>
+        <p>&copy; 2025 Spiritual Metascience Academy. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -1676,23 +1288,7 @@
                 observer.observe(element);
             });
 
-            // Counsellor specialty filter
-            const filterButtons = document.querySelectorAll('.filter-button');
-            const counsellorCards = document.querySelectorAll('.counsellor-card');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    filterButtons.forEach(b => b.classList.remove('is-active'));
-                    button.classList.add('is-active');
-
-                    const filter = button.dataset.filter;
-                    counsellorCards.forEach(card => {
-                        const categories = (card.dataset.categories || '').split(',');
-                        const show = filter === 'すべて' || categories.includes(filter);
-                        card.classList.toggle('is-hidden', !show);
-                    });
-                });
-            });
         });
     </script>
 
